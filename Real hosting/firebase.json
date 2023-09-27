@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "compassti2-fe056-c99c3",
     "public": "./",
     "ignore": [
       "firebase.json",
