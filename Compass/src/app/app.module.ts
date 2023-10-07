@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// inicio servicio
-import { CargaScriptService } from './carga-script.service';
-// fin servicio
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
 import { AppRoutingModule } from './app-routing.module';
+import { environments } from 'src/environments/environments';
+import { CargaScriptService } from './carga-script.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
@@ -13,6 +14,7 @@ import { VerificarCorreoComponent } from './components/verificar-correo/verifica
 import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,15 @@ import { HomeComponent } from './components/home/home.component';
     VerificarCorreoComponent,
     RecuperarPasswordComponent,
     SpinnerComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environments.firebaseConfig)
   ],
   providers: [
     CargaScriptService
@@ -36,3 +42,4 @@ import { HomeComponent } from './components/home/home.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

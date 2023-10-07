@@ -1,42 +1,37 @@
-<body>
+<div class="container-all">
+    <div class="ctn-form">
+        <h2 class="logo"><i class="fa-regular fa-compass"></i> <a routerLink="/home">Compass</a></h2>
+        <h1 class="tittle">Registrarse</h1>
 
-    <div class="container-all">
+        <form [formGroup]="registrarUsuario" (ngSubmit)="registrar()">
 
-        <div class="ctn-form">
-            <h2 class="logo"><i class="fa-regular fa-compass"></i> <a routerLink="/home">Compass</a></h2>
-            <h1 class="tittle">Registrarse</h1>
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" formControlName="email" placeholder="name@example.com">
+            <span class="msg-error"></span>
 
-            <form action="">
-                
-                 <label for="">Nombre de Usuario</label>
-                <input type="text">
-                <span class="msg-error"></span>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" class="form-control" formControlName="password" placeholder="Password">
+            <span class="msg-error"></span>
 
-                <label for="">Email</label>
-                <input type="text">
-                <span class="msg-error"></span>
+            <label for="repetirPassword">Repetir la Contraseña</label>
+            <input type="password" id="repetirPassword" class="form-control" formControlName="repetirPassword"
+                placeholder="Repetir Password">
+            <span class="msg-error"></span>
 
-                <label for="">Contraseña</label>
-                <input type="password">
-                <span class="msg-error"></span>
+            <input type="submit" value="Registrar">
+        </form>
 
-                <input type="submit" value="Registrar">
-
-            </form>
-
-            <span class="text-footer">¿Ya te has registrado?
-                <a routerLink="/login">Iniciar Sesión</a>
-            </span>
-        </div>
-
-        <div class="ctn-text">
-
-            <div class="capa"></div>
-            <h1 class="tittle-description">Ve lo que viene</h1>
-            <p class="text-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, nostrum. Aut provident consequuntur, perferendis molestiae repellendus ullam, beatae voluptas corrupti id ab possimus illum consequatur reiciendis velit veritatis similique temporibus.</p>
-
-        </div>
-
+        <span class="text-footer">¿Ya te has registrado?
+            <a routerLink="/login">Iniciar Sesión</a>
+        </span>
     </div>
-    <script src="https://kit.fontawesome.com/84219ce10c.js" crossorigin="anonymous"></script>
-</body>
+
+    <div class="ctn-text">
+        <div class="capa"></div>
+        <h1 class="tittle-description">Ve lo que viene</h1>
+        <p class="text-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, nostrum.
+            Aut provident consequuntur, perferendis molestiae repellendus ullam, beatae voluptas corrupti id ab
+            possimus illum consequatur reiciendis velit veritatis similique temporibus.</p>
+    </div>
+</div>
+>
