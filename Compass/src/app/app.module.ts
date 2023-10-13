@@ -15,6 +15,11 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProgramasComponent } from './components/programas/programas.component';
+import { PeliculasComponent } from './components/peliculas/peliculas.component';
+import { MasRecientesComponent } from './components/mas-recientes/mas-recientes.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,7 +32,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     RecuperarPasswordComponent,
     SpinnerComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ProgramasComponent,
+    PeliculasComponent,
+    MasRecientesComponent
   ],
   imports: [
     BrowserModule,
