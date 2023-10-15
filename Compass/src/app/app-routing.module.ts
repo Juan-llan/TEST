@@ -6,15 +6,13 @@ import { VerificarCorreoComponent } from './components/verificar-correo/verifica
 import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
-import { BuscarComponent } from './pages/buscar/buscar.component';
-import { PeliculaComponent } from './pages/pelicula/pelicula.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'registrar-usuario', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
-  { path: 'buscar/:texto', component: BuscarComponent },
-  { path: 'pelicula/:id', component: PeliculaComponent },
+
 
   { path: 'login', component: LoginComponent },
   { path: 'registrar-usuario', component: RegistrarUsuarioComponent },

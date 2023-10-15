@@ -15,9 +15,9 @@ import { RecuperarPasswordComponent } from './components/recuperar-password/recu
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     RecuperarPasswordComponent,
     SpinnerComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp(environments.firebaseConfig),
-    PagesModule,
+
     SharedModule
   ],
   providers: [
