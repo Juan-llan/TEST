@@ -15,6 +15,8 @@ import { RecuperarPasswordComponent } from './components/recuperar-password/recu
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { FooterComponent } from './shared/footer/footer.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    AngularFireModule.initializeApp(environments.firebaseConfig)
+    AngularFireModule.initializeApp(environments.firebaseConfig),
+    PagesModule,
+    SharedModule
   ],
   providers: [
     CargaScriptService
