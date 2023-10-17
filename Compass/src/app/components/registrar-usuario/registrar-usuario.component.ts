@@ -37,6 +37,8 @@ export class RegistrarUsuarioComponent implements OnInit {
     const email = this.registrarUsuario.value.email;
     const password = this.registrarUsuario.value.password;
     const repetirPassword = this.registrarUsuario.value.repetirPassword;
+    console.log(this.registrarUsuario);
+
     if (password !== repetirPassword) {
       this.toastr.error('Las contraseñas ingresadas deben ser las mismas',
         'Error');

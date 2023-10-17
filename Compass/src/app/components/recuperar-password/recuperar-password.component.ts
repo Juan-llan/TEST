@@ -20,8 +20,10 @@ export class RecuperarPasswordComponent implements OnInit {
     private toastr: ToastrService,
     private router: Router,
     private firebaseError: FirebaseCodeErrorService) {
+
+
     this.recuperarUsuario = this.fb.group({
-      correo: ['', Validators.required]
+      correo: ['', [Validators.required, Validators.email]]
     })
   }
   ngOnInit(): void {
