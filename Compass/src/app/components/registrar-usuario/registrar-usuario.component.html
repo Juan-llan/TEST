@@ -1,5 +1,5 @@
 <div class="container-all">
-    <div class="ctn-form">
+    <div *ngIf="!loading" class="ctn-form">
         <h2 class="logo"><i class="fa-regular fa-compass"></i> <a routerLink="/home">Compass</a></h2>
         <h1 class="tittle">Registrarse</h1>
 
@@ -25,7 +25,7 @@
             <a routerLink="/login">Iniciar Sesión</a>
         </span>
     </div>
-
+    <app-spinner *ngIf="loading"></app-spinner>
     <div class="ctn-text">
         <div class="capa"></div>
         <h1 class="tittle-description">Ve lo que viene</h1>
@@ -33,5 +33,6 @@
             Aut provident consequuntur, perferendis molestiae repellendus ullam, beatae voluptas corrupti id ab
             possimus illum consequatur reiciendis velit veritatis similique temporibus.</p>
     </div>
+
 </div>
 >

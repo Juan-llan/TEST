@@ -2,7 +2,7 @@
 
     <div class="container-all">
 
-        <div class="ctn-form">
+        <div *ngIf="!loading" class="ctn-form">
             <h2 class="logo"><i class="fa-regular fa-compass"></i> <a
                     href="../p-gina-estilo-netflix-carousel/index.html">Compass</a></h2>
             <h1 class="tittle">Iniciar sesión</h1>
@@ -22,9 +22,11 @@
 
             <span class="text-footer">¿Aún no te has registrado?
                 <a routerLink="/registrar-usuario">Registrate</a>
+                
             </span>
+            <a class="mt-3" routerLink="/recuperar-password">Recuperar Contraseña</a>
         </div>
-
+        <app-spinner *ngIf="loading"></app-spinner>
         <div class="ctn-text">
 
             <div class="capa"></div>
@@ -34,6 +36,7 @@
                 possimus illum consequatur reiciendis velit veritatis similique temporibus.</p>
 
         </div>
+
 
     </div>
 

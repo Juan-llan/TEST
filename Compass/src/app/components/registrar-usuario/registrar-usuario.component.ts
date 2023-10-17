@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
+import { FirebaseCodeErrorService } from 'src/app/services/firebase-code-error.service';
 
 @Component({
   selector: 'app-registrar-usuario',
   templateUrl: './registrar-usuario.component.html',
   styleUrls: ['./registrar-usuario.component.css']
 })
+
+
 export class RegistrarUsuarioComponent implements OnInit {
   registrarUsuario: FormGroup;
   loading: boolean = false;
@@ -16,8 +19,9 @@ export class RegistrarUsuarioComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private afAuth: AngularFireAuth,
+    private toastr: ToastrService,
     private router: Router,
-    private toastr: ToastrService
+    private firebaseError: FirebaseCodeErrorService,
   ) {
     this.registrarUsuario = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -38,30 +42,21 @@ export class RegistrarUsuarioComponent implements OnInit {
         'Error');
       return;
     }
+    this.loading = true;
     this.afAuth.createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
+      .then(() => {
+        this.loading = false;
         this.toastr.success('El usuario ya fue registrado con exito!', 'Usuario registrado')
         this.router.navigate(['/login']);
-        console.log(userCredential);
+
         // Puedes redirigir aquí o mostrar un mensaje de éxito.
       })
       .catch((error) => {
-        console.error(error);
-        this.toastr.error(this.firebaseError(error.code), 'Error')
+        this.loading = false;
+        this.toastr.error(this.firebaseError.codeError(error.code), 'Error')
         // Maneja los errores aquí, por ejemplo, muestra un mensaje de error al usuario.
       });
 
   }
-  firebaseError(code: string) {
-    switch (code) {
-      case 'auth/email-already-in-use':
-        return 'El usuario ya existe '
-      case 'auth/weak-password':
-        return 'La contraseña es muy debil '
-      case 'auth/invalid-email':
-        return 'El correo es invalido '
-      default:
-        return 'Error desconocido'
-    }
-  }
+
 }
