@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-	--rojo: #E50914;
-	--fondo: #141414;
+    --rojo: #E50914;
+    --fondo: #141414;
 }
 
-*{
-    
+* {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
-    
-    
+
+
 }
 
-body{
+body {
     background-color: #141414;
-    
+
     padding: 20px;
-        
+
 }
 
-.container-all{
+.container-all {
     width: 100%;
     max-width: 1000px;
     margin: auto;
@@ -31,59 +31,59 @@ body{
     display: flex;
     border-radius: 20px;
     overflow: hidden;
-    
+
 }
 
-.ctn-form{
-    
+.ctn-form {
+
     width: 80%;
     padding: 40px;
     background: #f7f7f7;
-    
+
 }
 
-.logo{
+.logo {
     width: 150px;
     display: block;
     margin: auto;
     color: var(--rojo);
-    
+
 }
 
-.tittle{
-    
+.tittle {
+
     text-align: center;
     margin-top: 20px;
     font-weight: 300;
     color: #7a7a7a;
 }
 
-label{
-    
+label {
+
     display: block;
     margin-top: 30px;
     font-size: 30px;
     font-weight: 300;
     color: #7a7a7a;
-    
-    
+
+
 }
 
 input[type="text"],
-input[type="password"]{
+input[type="password"] {
     width: 100%;
     height: 20px;
-    
-    border:0px;
+
+    border: 0px;
     outline: 0px;
-    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     color: #E30F87;
     font-size: 14px;
-    
+
 }
 
-input[type="submit"]{
-    
+input[type="submit"] {
+
     width: 100%;
     height: 40px;
     margin-top: 30px;
@@ -94,13 +94,13 @@ input[type="submit"]{
     font-size: 18px;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
     background: linear-gradient(90deg, (90deg, #abdbe3, #154c79));
-    
+
 }
 
-.text-footer{
-    
+.text-footer {
+
     display: block;
     margin-top: 10px;
     text-align: center;
@@ -108,16 +108,16 @@ input[type="submit"]:hover{
     font-weight: 500;
 }
 
-.text-footer a{
-    
+.text-footer a {
+
     color: #029EE1;
     font-weight: 500;
 }
 
 /* lado derecho */
 
-.ctn-text{
-    
+.ctn-text {
+
     width: 100%;
     background-image: url(../../../assets/imagenes/logo.jpg);
     background-position: center;
@@ -126,51 +126,51 @@ input[type="submit"]:hover{
     position: relative;
 }
 
-.capa{
-    
+.capa {
+
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(90deg,#154c79, #76b5c5);
+    background: linear-gradient(90deg, #154c79, #76b5c5);
     opacity: 0.8;
-    
+
 }
 
-.tittle-description{
+.tittle-description {
     position: relative;
     top: 80px;
     color: white;
     font-weight: 300;
     font-size: 40px;
-    
+
 }
 
-.text-description{
-    
+.text-description {
+
     position: relative;
     top: 110px;
     color: white;
     font: 18px;
     font-weight: 200;
-    
+
 }
 
-.msg-error{
+.msg-error {
     color: red;
     display: block;
     margin-top: 10px;
 }
 
 /* Responsive */
- 
-@media screen and (max-width: 800px){ 
-    .ctn-text{
-        display: none;   
+
+@media screen and (max-width: 800px) {
+    .ctn-text {
+        display: none;
     }
-    
-    .ctn-form{    
+
+    .ctn-form {
         margin: auto;
         width: 100%;
         background: white;

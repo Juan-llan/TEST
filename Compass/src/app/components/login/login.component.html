@@ -7,17 +7,16 @@
                     href="../p-gina-estilo-netflix-carousel/index.html">Compass</a></h2>
             <h1 class="tittle">Iniciar sesión</h1>
 
-            <form action="">
+            <form (ngSubmit)="login() " [formGroup]="loginUsuario" action="">
 
                 <label for="">Email</label>
-                <input type="text">
-                <span class="msg-error">Error </span>
+                <input type="email" formControlName="email" class="form-control" placeholder="name@example">
+
 
                 <label for="">Contraseña</label>
-                <input type="password">
-                <span class="msg-error">Error </span>
+                <input type="password" formControlName="password" class="form-control" placeholder="Password">
 
-                <input type="submit" value="Iniciar">
+                <button type="submit" class="btn btn-primary btn-lg" [disabled]="loginUsuario.invalid">Ingresar</button>
 
             </form>
 
