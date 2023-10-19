@@ -26,7 +26,9 @@
                     class="text-danger">
                     La <strong>contraseña</strong> es requerido
                 </span>
-                <button type="submit" class="btn btn-primary btn-lg" [disabled]="loginUsuario.invalid">Ingresar</button>
+
+                <button type="submit"
+                    [disabled]="loginUsuario.invalid">Ingresar</button>
 
             </form>
 
@@ -34,7 +36,7 @@
                 <a routerLink="/registrar-usuario">Registrate</a>
 
             </span>
-            <a class="mt-3" routerLink="/recuperar-password">Recuperar Contraseña</a>
+            <a class="mt-3 d-flex justify-content-center" routerLink="/recuperar-password">Recuperar Contraseña</a>
         </div>
         <app-spinner *ngIf="loading"></app-spinner>
         <div class="ctn-text">
