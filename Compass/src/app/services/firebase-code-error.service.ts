@@ -34,6 +34,9 @@ export class FirebaseCodeErrorService {
       case FirebaseCodeErrorEnum.InvalidLoginCredentials:
         return 'Datos no validos'
 
+      //Many requas
+      case FirebaseCodeErrorEnum.ManyRequast:
+        return 'REQUAST'
 
       default:
         return 'Error desconocido'

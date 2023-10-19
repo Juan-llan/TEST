@@ -6,5 +6,6 @@ export enum FirebaseCodeErrorEnum {
   WrongPassword = 'auth/wrong-password',
   UserNotFound = 'auth/user-not-found',
   InvalidLoginCredentials = 'auth/invalid-login-credentials',
-  WeakPasswordAlready = "WeakPasswordAlready"
+  WeakPasswordAlready = "WeakPasswordAlready",
+  ManyRequast = 'auth/too-many-requests'
 }

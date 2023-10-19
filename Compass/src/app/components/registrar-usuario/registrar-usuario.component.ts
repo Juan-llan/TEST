@@ -47,18 +47,22 @@ export class RegistrarUsuarioComponent implements OnInit {
     this.loading = true;
     this.afAuth.createUserWithEmailAndPassword(email, password)
       .then(() => {
-        this.loading = false;
-        this.toastr.success('El usuario ya fue registrado con exito!', 'Usuario registrado')
-        this.router.navigate(['/login']);
+        this.verficarCorreo();
 
-        // Puedes redirigir aquí o mostrar un mensaje de éxito.
       })
       .catch((error) => {
         this.loading = false;
         this.toastr.error(this.firebaseError.codeError(error.code), 'Error')
-        // Maneja los errores aquí, por ejemplo, muestra un mensaje de error al usuario.
       });
 
+  }
+  verficarCorreo() {
+    this.afAuth.currentUser.then(user => user?.sendEmailVerification())
+      .then(() => {
+        this.toastr.info('Le enviamos un correo electronico para su vereficacion',
+          'Verificar correo')
+        this.router.navigate(['/login']);
+      });
   }
 
 }
