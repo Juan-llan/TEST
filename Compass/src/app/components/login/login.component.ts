@@ -31,6 +31,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void { }
+
+
   login() {
     const email = this.loginUsuario.value.email;
     const password = this.loginUsuario.value.password;
@@ -38,6 +40,7 @@ export class LoginComponent implements OnInit {
 
     this.loading = true;
     this.afAuth.signInWithEmailAndPassword(email, password).then((user) => {
+
       if (user.user?.emailVerified) {
         this.router.navigate(['/home']);
       } else {
