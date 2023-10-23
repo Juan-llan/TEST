@@ -20,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ProfileUsuarioComponent } from './components/profile-usuario/profile-usuario.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,9 @@ import { ToastrModule } from 'ngx-toastr';
     SpinnerComponent,
     HomeComponent,
     FooterComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    ProfileUsuarioComponent,
+
   ],
   imports: [
     BrowserModule,

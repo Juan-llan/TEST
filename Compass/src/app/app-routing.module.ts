@@ -6,6 +6,7 @@ import { VerificarCorreoComponent } from './components/verificar-correo/verifica
 import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProfileUsuarioComponent } from './components/profile-usuario/profile-usuario.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'verificar-correo', component: VerificarCorreoComponent },
   { path: 'recuperar-password', component: RecuperarPasswordComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'profile-usuario', component: ProfileUsuarioComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 
 ];
