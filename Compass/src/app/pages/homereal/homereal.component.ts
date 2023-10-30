@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Movie } from 'src/app/interfaces/peliculas.interfaces';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 
@@ -10,6 +10,22 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
 export class HomerealComponent implements OnInit {
   movies: Movie[] = [];
   moviesSlideShow: Movie[] = [];
+
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+
+
+    const pos = (document.documentElement.scrollTop || document.body.scrollTop) * 1300;
+    const max = (document.documentElement.scrollHeight || document.body.scrollHeight);
+    if (pos > max) {
+      this.peliculasSvc.getPeliculas().subscribe(movies => {
+        this.movies.push(...movies);
+      })
+    }
+
+
+  }
 
 
   constructor(private peliculasSvc: PeliculasService) { }
