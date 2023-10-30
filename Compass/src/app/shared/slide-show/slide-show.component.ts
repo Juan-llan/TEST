@@ -8,16 +8,24 @@ import Swiper from 'swiper';
   templateUrl: './slide-show.component.html',
   styleUrls: ['./slide-show.component.css']
 })
+
 export class SlideShowComponent implements OnInit, AfterViewInit {
+
+
   @Input() movies?: Movie[];
+
   mySwiper?: Swiper;
   movie: Movie[] = [];
+
   constructor(private router: Router) { }
+
   ngAfterViewInit(): void {
     this.mySwiper = new Swiper('.swiper', {
       loop: true,
     });
+
   }
+  
   ngOnInit(): void {
 
 

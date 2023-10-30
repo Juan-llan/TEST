@@ -9,11 +9,7 @@
 	box-sizing: border-box;
 }
 
-body {
-	background: var(--fondo);
-	font-family: 'Open Sans', sans-serif;
-	padding: 40px;
-}
+
 
 /* barra de busqueda */
 

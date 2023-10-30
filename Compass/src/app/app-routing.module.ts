@@ -13,7 +13,7 @@ import { PeliculaComponent } from './pages/pelicula/pelicula.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'registrar-usuario', pathMatch: 'full' },
+  //{ path: '', redirectTo: 'registrar-usuario', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
   { path: 'homereal', component: HomerealComponent },
@@ -27,8 +27,8 @@ const routes: Routes = [
   { path: 'recuperar-password', component: RecuperarPasswordComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'profile-usuario', component: ProfileUsuarioComponent },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/homereal', pathMatch: 'full' },
+  { path: '', redirectTo: '/homereal', pathMatch: 'full' },
 
 ];
 
