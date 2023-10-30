@@ -7,12 +7,18 @@ import { RecuperarPasswordComponent } from './components/recuperar-password/recu
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileUsuarioComponent } from './components/profile-usuario/profile-usuario.component';
+import { HomerealComponent } from './pages/homereal/homereal.component';
+import { BuscarComponent } from './pages/buscar/buscar.component';
+import { PeliculaComponent } from './pages/pelicula/pelicula.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'registrar-usuario', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
+  { path: 'homereal', component: HomerealComponent },
+  { path: 'buscar/:texto', component: BuscarComponent },
+  { path: 'pelicula/:id', component: PeliculaComponent },
 
 
   { path: 'login', component: LoginComponent },
@@ -22,6 +28,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'profile-usuario', component: ProfileUsuarioComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
 ];
 
