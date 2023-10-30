@@ -8,6 +8,7 @@ export interface PeliculasResponse {
 }
 
 export interface Movie {
+    voterange: string;
     adult: boolean;
     backdrop_path: string;
     id: number;

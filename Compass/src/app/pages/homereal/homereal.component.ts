@@ -35,10 +35,22 @@ export class HomerealComponent implements OnInit {
 
     this.peliculasSvc.getPeliculas().subscribe(movies => {
       this.moviesSlideShow = movies;
-      this.movies = movies;
-
-    })
-
+      this.movies = movies.map(movie => {
+        // Calcular el rango de votos
+        movie.voterange = this.calcularRangoVotos(movie.vote_average);
+        return movie;
+      });
+    });
+  }
+  calcularRangoVotos(voteAverage: number): string {
+    // Define tus rangos de votos según tus criterios
+    if (voteAverage >= 8) {
+      return 'Excelente';
+    } else if (voteAverage >= 6) {
+      return 'Bueno';
+    } else {
+      return 'Regular';
+    }
   }
 
 }

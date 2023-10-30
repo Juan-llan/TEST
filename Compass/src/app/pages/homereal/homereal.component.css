@@ -1,0 +1,14 @@
+.card-title {
+    font-size: 30px;
+
+}
+
+.card {
+    width: 300px;
+    /* Establece el ancho deseado para las tarjetas */
+    height: 400px;
+    /* Establece la altura deseada para las tarjetas */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen de fondo para cubrir completamente la tarjeta */
+    background-position: center center;
+}
