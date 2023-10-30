@@ -25,19 +25,19 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
     });
 
   }
-  
+
   ngOnInit(): void {
 
 
   }
-  onSlidePrev() {
+  onSliderPrev() {
 
     this.mySwiper?.slidePrev();
 
   }
 
 
-  onSlideNext() {
+  onSliderNext() {
 
     this.mySwiper?.slideNext();
 
