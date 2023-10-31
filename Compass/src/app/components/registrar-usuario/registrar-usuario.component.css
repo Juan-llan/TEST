@@ -170,3 +170,8 @@ input[type="submit"]:hover {
         background: white;
     }
 }
+
+.lolaso {
+    background-color: #000000;
+    height: 100vh;
+}
