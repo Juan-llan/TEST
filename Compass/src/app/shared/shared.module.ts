@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { RouterModule } from '@angular/router';
+import { PipesModule } from '../pipes/pipes.module';
+import {NgbPaginationModule, NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
+import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,15 +14,21 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     NavbarComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    PeliculasPosterGridComponent
   ],
   exports: [
     NavbarComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    PeliculasPosterGridComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgbPaginationModule,
+    NgbRatingModule,
+    PipesModule,
+    ReactiveFormsModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {}
