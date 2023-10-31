@@ -8,6 +8,9 @@ import { Movie, PeliculasResponse } from '../interfaces/peliculas.interfaces';
   providedIn: 'root'
 })
 export class PeliculasService {
+  resetPeliculaPage() {
+    throw new Error('Method not implemented.');
+  }
 
   private serverURL: string = 'https://api.themoviedb.org/3';
   private peliculasPage = 1;
