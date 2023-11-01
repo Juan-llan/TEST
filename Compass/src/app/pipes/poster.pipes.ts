@@ -13,7 +13,7 @@ export class PosterPipe implements PipeTransform {
             return `https://image.tmdb.org/t/p/original${poster}`
         } else {
 
-            return './assets/images/no-image.jpg'
+            return './assets/imagenes/imagenotfund.jpg'
 
         }
 
