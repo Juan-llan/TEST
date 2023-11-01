@@ -10,7 +10,7 @@ import { PeliculasPosterGridComponent } from 'src/app/shared/peliculas-poster-gr
   templateUrl: './homereal.component.html',
   styleUrls: ['./homereal.component.css']
 })
-export class HomerealComponent implements OnInit {
+export class HomerealComponent implements OnInit, OnDestroy {
  
   movies:Movie[] = [];
   moviesSlideShow:Movie[] = [];
@@ -53,7 +53,7 @@ export class HomerealComponent implements OnInit {
   }
 
   ngOnDestroy(){
-    //this.peliculasSvc.resetPeliculaPage();
+    this.peliculasSvc.resetPeliculaPage();
   }
 
 }

@@ -17,7 +17,7 @@ export class PeliculasPosterGridComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.movies)
+   
   }
   
   onMovieClick(movie:Movie){

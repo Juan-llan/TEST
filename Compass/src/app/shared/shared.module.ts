@@ -6,9 +6,7 @@ import { RouterModule } from '@angular/router';
 import { PipesModule } from '../pipes/pipes.module';
 import {NgbPaginationModule, NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
 import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
-import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgbPaginationModule,
     NgbRatingModule,
     PipesModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class SharedModule {}

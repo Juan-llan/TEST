@@ -9,8 +9,14 @@
         <ul class="navbar-nav mr-auto"></ul>
         <div class="d-flex">
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar Pelicula" aria-label="Search">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
+                <input 
+                class="form-control mr-sm-2" 
+                #txtBuscar
+                (keyup.enter)="buscarPelicula(txtBuscar.value)"
+                type="search" 
+                placeholder="Buscar Pelicula"
+                aria-label="Search">
+                <button (click)="buscarPelicula(txtBuscar.value)" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
             </form>
         </div>
 

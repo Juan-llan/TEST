@@ -8,14 +8,12 @@ import { Movie, PeliculasResponse } from '../interfaces/peliculas.interfaces';
   providedIn: 'root'
 })
 export class PeliculasService {
-  resetPeliculaPage() {
-    throw new Error('Method not implemented.');
-  }
+  
 
   private serverURL: string = 'https://api.themoviedb.org/3';
   private peliculasPage = 1;
   cargando = false;
-  private apiKey = '264434b9906c0733bfb49110e3a3e156';
+  private apiKey = '0';
   private baseURL: string = 'https://api.themoviedb.org/3';
 
   constructor(private http: HttpClient) { }
@@ -46,6 +44,15 @@ export class PeliculasService {
     );
 
   }
+resetPeliculaPage(){  
+  this.peliculasPage=1;
+
+
+}
+
+
+
+
   buscarPeliculas(texto: string): Observable<Movie[]> {
 
     /*   https://api.themoviedb.org/3/search/movie?api_key=13ee2b3b1810d881d34a3d2f4351f448&language=es-ES&page=1&include_adult=false
