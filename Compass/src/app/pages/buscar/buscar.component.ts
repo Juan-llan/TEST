@@ -8,22 +8,23 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
   styleUrls: ['./buscar.component.css']
 })
 export class BuscarComponent implements OnInit {
-  texto:string='';
-  movies:Movie[]=[];
+  texto: string = '';
+  movies: Movie[] = [];
 
-  constructor(private activatedRoute: ActivatedRoute, private peliculasSvc:PeliculasService) { }
+  constructor(private activatedRoute: ActivatedRoute, private peliculasSvc: PeliculasService) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params=>{
+    this.activatedRoute.params.subscribe(params => {
 
       //console.log(params['texto']);
-      this.texto=params['texto'];
+      this.texto = params['texto'];
 
-      
-      this.peliculasSvc.buscarPeliculas(params['texto']).subscribe(movies=>{
-        this.movies=movies;
+
+      this.peliculasSvc.buscarPeliculas(params['texto']).subscribe(movies => {
+
+        this.movies = movies;
       })
-       
+
     });
   }
 

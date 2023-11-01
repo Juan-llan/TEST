@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map, tap, catchError } from 'rxjs/operators';
 import { Movie, PeliculasResponse } from '../interfaces/peliculas.interfaces';
+import { MovieDetails } from '../interfaces/pelicula.interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PeliculasService {
-  
+
 
   private serverURL: string = 'https://api.themoviedb.org/3';
   private peliculasPage = 1;
@@ -44,11 +45,11 @@ export class PeliculasService {
     );
 
   }
-resetPeliculaPage(){  
-  this.peliculasPage=1;
+  resetPeliculaPage() {
+    this.peliculasPage = 1;
 
 
-}
+  }
 
 
 
@@ -64,6 +65,18 @@ resetPeliculaPage(){
     }).pipe(
       map(res => res.results)
     )
+
+
+  }
+  getPeliculasDetalle(id: string) {
+
+    return this.http.get<MovieDetails>(`${this.serverURL}/movie/${id}`, {
+      params: this.params
+
+
+    }).pipe(
+      catchError(err => of(null))
+    );
 
 
   }
