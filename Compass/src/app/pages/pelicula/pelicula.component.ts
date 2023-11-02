@@ -36,7 +36,7 @@ export class PeliculaComponent implements OnInit {
 
     this.peliculasSvc.getCast(id).subscribe(cast => {
       this.cast = cast
-      console.log(cast)
+
     })
 
   }
