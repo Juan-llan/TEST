@@ -10,7 +10,7 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
 export class BuscarComponent implements OnInit {
   texto: string = '';
   movies: Movie[] = [];
-
+  noExiste?: boolean;
   constructor(private activatedRoute: ActivatedRoute, private peliculasSvc: PeliculasService) { }
 
   ngOnInit(): void {
@@ -22,7 +22,14 @@ export class BuscarComponent implements OnInit {
 
       this.peliculasSvc.buscarPeliculas(params['texto']).subscribe(movies => {
 
-        this.movies = movies;
+        if (movies.length > 0) {
+          this.movies = movies;
+          this.noExiste = false;
+        } else {
+          this.noExiste = true;
+        }
+
+
       })
 
     });
