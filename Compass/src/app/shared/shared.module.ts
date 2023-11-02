@@ -4,8 +4,9 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from '../pipes/pipes.module';
-import {NgbPaginationModule, NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
+import { CastSlideShowComponent } from './cast-slide-show/cast-slide-show.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -13,12 +14,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     NavbarComponent,
     SlideShowComponent,
-    PeliculasPosterGridComponent
+    PeliculasPosterGridComponent,
+    CastSlideShowComponent
   ],
   exports: [
     NavbarComponent,
     SlideShowComponent,
     PeliculasPosterGridComponent,
+    CastSlideShowComponent
   ],
   imports: [
     CommonModule,
@@ -30,4 +33,4 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule
   ]
 })
-export class SharedModule {}
+export class SharedModule { }

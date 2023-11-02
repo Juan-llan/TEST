@@ -3,6 +3,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 import { MovieDetails } from 'src/app/interfaces/pelicula.interfaces';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Cast } from 'src/app/interfaces/credits.interfaces';
 
 @Component({
   selector: 'app-pelicula',
@@ -12,7 +13,7 @@ import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 export class PeliculaComponent implements OnInit {
 
   pelicula?: MovieDetails;
-
+  cast: Cast[] = [];
 
   constructor(private peliculasSvc: PeliculasService, private activatedRoute: ActivatedRoute, private router: Router, private config: NgbRatingConfig) {
 
@@ -33,6 +34,10 @@ export class PeliculaComponent implements OnInit {
       this.pelicula = movie;
     });
 
+    this.peliculasSvc.getCast(id).subscribe(cast => {
+      this.cast = cast
+      console.log(cast)
+    })
 
   }
 
