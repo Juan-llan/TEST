@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
@@ -7,12 +8,15 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private afAuth: AngularFireAuth) { }
 
   ngOnInit(): void {
       
   }
 
+  logOut() {
+    this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+  }
   buscarPelicula(texto:string){
 
     texto = texto.trim();
