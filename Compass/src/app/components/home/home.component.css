@@ -9,58 +9,55 @@
 	box-sizing: border-box;
 }
 
-body {
-	background: var(--fondo);
-	font-family: 'Open Sans', sans-serif;
-    padding: 40px; 
-}
+
 
 /* barra de busqueda */
 
 .container {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-position: center 20%;
-    background-size: cover;
-    min-height: 250px;
-    background-image:linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../../../assets/imagenes/fondo.jpg);
-    
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-position: center 20%;
+	background-size: cover;
+	min-height: 250px;
+	background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../../../assets/imagenes/fondo.jpg);
+
 }
 
 .container .buscar {
-    
-    width: 950px;
-    padding: 10px;
-    padding-right: 35px;
-    border-radius: 5px;
-    border: 0;
-    outline: none;
-    
+
+	width: 950px;
+	padding: 10px;
+	padding-right: 35px;
+	border-radius: 5px;
+	border: 0;
+	outline: none;
+
 }
 
 .busqueda {
-    background: var(--rojo);
-    padding: 10px 15px;
-    position: absolute; /* Agregado el punto y coma aquí */
-    margin: auto;
-    border-radius: 0 5px 5px 0;
-    color: white;
+	background: var(--rojo);
+	padding: 10px 15px;
+	position: absolute;
+	/* Agregado el punto y coma aquí */
+	margin: auto;
+	border-radius: 0 5px 5px 0;
+	color: white;
 }
 
-.busqueda_inf{
-    position: absolute;
-    top: 10%;
-    color: white;
-    font-weight: 600;
+.busqueda_inf {
+	position: absolute;
+	top: 10%;
+	color: white;
+	font-weight: 600;
 	font-size: 3.12em;
 	margin-bottom: 0.4em;
-    
-    
+
+
 }
 
 /*  */
@@ -103,12 +100,12 @@ header nav a.activo {
 	font-size: 16px;
 	min-height: 40.62em;
 	color: #fff;
-	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../../../assets/imagenes/backdrop.jpg);
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../../../assets/imagenes/backdrop.jpg);
 	background-position: center center;
 	background-size: cover;
 	margin-bottom: 3.12em;
 	display: flex;
-	align-items: end;
+	align-items: flex-end;
 }
 
 .pelicula-principal .contenedor {
@@ -133,7 +130,7 @@ header nav a.activo {
 }
 
 .pelicula-principal .boton {
-	background: rgba(0,0,0, 0.5);
+	background: rgba(0, 0, 0, 0.5);
 	border: none;
 	border-radius: 0.31em;
 	padding: 0.93em 1.87em;
@@ -157,7 +154,7 @@ header nav a.activo {
 .contenedor-titulo-controles {
 	display: flex;
 	justify-content: space-between;
-	align-items: end;
+	align-items: flex-end;
 }
 
 .contenedor-titulo-controles h3 {
@@ -195,7 +192,7 @@ header nav a.activo {
 .peliculas-recomendadas .contenedor-principal .flecha-derecha {
 	position: absolute;
 	border: none;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0, 0, 0, 0.3);
 	font-size: 40px;
 	height: 50%;
 	top: calc(50% - 25%);
@@ -209,7 +206,7 @@ header nav a.activo {
 
 .peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
 .peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
-	background: rgba(0,0,0, .9);
+	background: rgba(0, 0, 0, .9);
 }
 
 .peliculas-recomendadas .contenedor-principal .flecha-izquierda {
@@ -236,7 +233,7 @@ header nav a.activo {
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
 	min-width: 20%;
 	transition: .3s ease all;
-	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
