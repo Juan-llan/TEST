@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" routerLink="/">Compass</a>
-    <button type="button" class="btn btn-outline-primary me-2" (click)="logOut()">LogOut</button>
+    
+    <button type="button" class="btn btn-outline-primary me-2"
+     (click)="logOut()" 
+     *ngIf="isLoggedIn" >LogOut</button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,4 +22,5 @@
         </div>
 
     </div>
+
 </nav>

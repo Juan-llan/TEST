@@ -24,6 +24,11 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ProfileUsuarioComponent } from './components/profile-usuario/profile-usuario.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { ListComponent } from './components/list/list.component';
+import { FomularioComponent } from './components/fomulario/fomulario.component';
 
 
 
@@ -41,6 +46,8 @@ import { ProfileUsuarioComponent } from './components/profile-usuario/profile-us
     FooterComponent,
     MovieDetailComponent,
     ProfileUsuarioComponent,
+    ListComponent,
+    FomularioComponent,
 
   ],
   imports: [
@@ -54,7 +61,9 @@ import { ProfileUsuarioComponent } from './components/profile-usuario/profile-us
     ToastrModule.forRoot(),
     RouterModule,
     PagesModule,
-    SharedModule
+    SharedModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [
     CargaScriptService

@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/services/firebase-code-error.service';
-
+import { GsesionInterfaces } from 'src/app/interfaces/gsesion.interfaces';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -51,6 +51,6 @@ export class LoginComponent implements OnInit {
       this.loading = false;
       this.toastr.error(this.firebaseError.codeError(error.code), 'Error');
     })
-
+    
   }
 }

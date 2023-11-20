@@ -50,6 +50,10 @@ export class HomerealComponent implements OnInit, OnDestroy {
       this.movies = movies;
       this.moviesSlideShow = movies;
     })
+    
+    this.peliculasSvc.getSesion().subscribe(resp=>{
+      console.log(resp)
+    })
   }
 
   ngOnDestroy(){

@@ -10,23 +10,24 @@ import { ProfileUsuarioComponent } from './components/profile-usuario/profile-us
 import { HomerealComponent } from './pages/homereal/homereal.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { PeliculaComponent } from './pages/pelicula/pelicula.component';
-
-
+import { canActivate ,redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { ListComponent } from './components/list/list.component';
 const routes: Routes = [
   //{ path: '', redirectTo: 'registrar-usuario', pathMatch: 'full' },
 
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent,...canActivate(() => redirectUnauthorizedTo(['/login'])) },
   { path: 'homereal', component: HomerealComponent },
   { path: 'buscar/:texto', component: BuscarComponent },
   { path: 'pelicula/:id', component: PeliculaComponent },
-
+  { path: 'list', component: ListComponent,...canActivate(() => redirectUnauthorizedTo(['/login'])) },
 
   { path: 'login', component: LoginComponent },
   { path: 'registrar-usuario', component: RegistrarUsuarioComponent },
   { path: 'verificar-correo', component: VerificarCorreoComponent },
   { path: 'recuperar-password', component: RecuperarPasswordComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'profile-usuario', component: ProfileUsuarioComponent },
+  { path: 'profile-usuario', component: ProfileUsuarioComponent ,...canActivate(() => redirectUnauthorizedTo(['/login']))
+ },
   { path: '**', redirectTo: '/homereal', pathMatch: 'full' },
   { path: '', redirectTo: '/homereal', pathMatch: 'full' },
 

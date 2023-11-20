@@ -89,6 +89,14 @@ export class PeliculasService {
       map(res => res.cast),
       catchError(err => of([]))
     );
+  
 
+  }
+  getSesion(): Observable<any> {
+    return this.http.get<any>(`${this.serverURL}/authentication/token/new?api_key=264434b9906c0733bfb49110e3a3e156`, {
+      
+    }).pipe(
+      catchError(err => of(null))
+    );
   }
 }
