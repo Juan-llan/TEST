@@ -14,8 +14,13 @@ import { ProfileUsuarioComponent } from './components/profile-usuario/profile-us
 import { HomerealComponent } from './pages/homereal/homereal.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { PeliculaComponent } from './pages/pelicula/pelicula.component';
+<<<<<<< Updated upstream
 import { PeliculasComponent } from './peliculas/peliculas.component';
 import { SeriesComponent } from './series/series.component';
+=======
+import { PeliculasComponent } from './components/peliculas/peliculas.component';
+
+>>>>>>> Stashed changes
 
 
 const routes: Routes = [
@@ -27,7 +32,10 @@ const routes: Routes = [
   { path: 'pelicula/:id', component: PeliculaComponent },
 
   { path: 'peliculas', component: PeliculasComponent },
+<<<<<<< Updated upstream
   { path: 'series', component: SeriesComponent },
+=======
+>>>>>>> Stashed changes
 
   { path: 'login', component: LoginComponent },
   { path: 'registrar-usuario', component: RegistrarUsuarioComponent },
