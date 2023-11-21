@@ -16,7 +16,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { VerificarCorreoComponent } from './components/verificar-correo/verificar-correo.component';
 import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
-import { HomeComponent } from './components/home/home.component';
+
 import { FooterComponent } from './shared/footer/footer.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -42,7 +42,7 @@ import { FomularioComponent } from './components/fomulario/fomulario.component';
     VerificarCorreoComponent,
     RecuperarPasswordComponent,
     SpinnerComponent,
-    HomeComponent,
+
     FooterComponent,
     MovieDetailComponent,
     ProfileUsuarioComponent,
