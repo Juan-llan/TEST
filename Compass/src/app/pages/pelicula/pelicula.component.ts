@@ -14,6 +14,7 @@ export class PeliculaComponent implements OnInit {
 
   pelicula?: MovieDetails;
   cast: Cast[] = [];
+  movieData: any; // Objeto para almacenar los datos de la película o serie
 
   constructor(private peliculasSvc: PeliculasService, private activatedRoute: ActivatedRoute, private router: Router, private config: NgbRatingConfig) {
 
@@ -40,5 +41,6 @@ export class PeliculaComponent implements OnInit {
     })
 
   }
+
 
 }

@@ -40,8 +40,10 @@
 .logo {
     display: flex;
     width: 150px;
-    margin: auto;
     text-align: center;
+
+    display: block;
+    margin: auto;
   
 }
 
