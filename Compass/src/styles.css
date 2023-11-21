@@ -1,1 +1,72 @@
+<<<<<<< Updated upstream
 /* You can add global styles to this file, and also import other style files */
+=======
+body {
+    background-color: #141414;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 200;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+
+hr {
+    color: white;
+}
+
+
+.navbar{
+    background-color: #141414;
+  }
+  
+
+.navbar-brand {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #E50914 !important;
+}
+
+.nav-item {
+    color: #AAA;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+
+.btn-outline-success {
+    border-color: #bd4c5f !important;
+    ;
+    color: #bd4c5f !important;
+    ;
+}
+
+.btn-outline-success:hover {
+    background-color: #272a36;
+    color: white !important;
+}
+
+.block {
+    display: block;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.app-container {
+    background-color: #141414;
+    height: auto;
+}
+>>>>>>> Stashed changes

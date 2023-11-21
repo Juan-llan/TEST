@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <a class="navbar-brand" routerLink="/"><i class="fa-regular fa-compass"></i>Compass</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/peliculas">Peliculas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/series">Series</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mi cuenta</a>
+        </li>
+      </ul>
+      <div class="d-flex" style="position: absolute; left: 45%;">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" #txtBuscar (keyup.enter)="buscarPelicula(txtBuscar.value)"
+            type="search" placeholder="Buscar Pelicula o Serie" aria-label="Search">
+          <button (click)="buscarPelicula(txtBuscar.value)" class="btn btn-danger my-2 my-sm-0"
+            type="submit">Buscar</button>
+        </form>
+      </div>
+      <div class="d-flex" style="position: absolute; right: 1%;">
+        <button type="button" class="btn btn-danger me-2" (click)="logOut()">Iniciar Sesion</button>
+      </div>
+    </div>
+  </nav>
+  

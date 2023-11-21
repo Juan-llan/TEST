@@ -30,7 +30,7 @@ body{
     margin: auto;
     margin-top: 100px;
     display: flex;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -42,6 +42,7 @@ body{
     
 }
 
+<<<<<<< Updated upstream:Pag 0.1/Login-Register/css/estilos.css
 .logo{
     width: 150px;
     display: block;
@@ -52,6 +53,22 @@ body{
 
 .tittle{
     
+=======
+.logo {
+    display: flex;
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: var(--rojo);
+}
+
+
+
+
+    
+.tittle {
+
+>>>>>>> Stashed changes:Compass/src/app/components/login/login.component.css
     text-align: center;
     margin-top: 20px;
     font-weight: 300;
@@ -69,12 +86,31 @@ label{
     
 }
 
+<<<<<<< Updated upstream:Pag 0.1/Login-Register/css/estilos.css
 input[type="text"],
 input[type="password"]{
     width: 100%;
     height: 30px;
     background: rgba(0,0,0,0);
     border:0px;
+=======
+input[type="email"]{
+    width: 100%;
+    height: 20px;
+    background: rgba(0,0,0,0);
+    border: 0px;
+    outline: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    color: #E30F87;
+    font-size: 14px;
+
+}
+input[type="password"] {
+    width: 100%;
+    height: 20px;
+    background: rgba(0,0,0,0);
+    border: 0px;
+>>>>>>> Stashed changes:Compass/src/app/components/login/login.component.css
     outline: 0px;
     border-bottom: 1px solid rgba(0,0,0,0.12);
     color: #E30F87;
@@ -88,7 +124,11 @@ input[type="submit"]{
     height: 50px;
     margin-top: 60px;
     color: white;
+<<<<<<< Updated upstream:Pag 0.1/Login-Register/css/estilos.css
     background: var(--fondo);
+=======
+    background: #E50914;
+>>>>>>> Stashed changes:Compass/src/app/components/login/login.component.css
     font-weight: 300;
     cursor: pointer;
     font-size: 18px;
@@ -119,7 +159,11 @@ input[type="submit"]:hover{
 .ctn-text{
     
     width: 100%;
+<<<<<<< Updated upstream:Pag 0.1/Login-Register/css/estilos.css
     background-image: url(../css/image.png);
+=======
+    background-image: url(../../../assets/imagenes/image.png);
+>>>>>>> Stashed changes:Compass/src/app/components/login/login.component.css
     background-position: center;
     background-size: cover;
     padding: 40px;
@@ -175,4 +219,11 @@ input[type="submit"]:hover{
         width: 100%;
         background: white;
     }
+<<<<<<< Updated upstream:Pag 0.1/Login-Register/css/estilos.css
+=======
+}
+
+.pepe {
+    height: 90vh;
+>>>>>>> Stashed changes:Compass/src/app/components/login/login.component.css
 }
