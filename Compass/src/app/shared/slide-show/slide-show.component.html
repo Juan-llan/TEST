@@ -8,22 +8,11 @@
             'background-image':'url(https://image.tmdb.org/t/p/original' + movie.backdrop_path + ')'
           }">
             <div class="movie-description">
-<<<<<<< Updated upstream
-                <h3 style="color: white">{{movie.title}}                       
-                </h3>
-                
-                
-                <p>{{movie.overview | slice: 0:1300 }}</p>
-
-                <button class="btn btn-danger"
-                (click)="onMovieClick(movie)">Más Información</button>
-=======
                 <h3 style="color: white">{{movie.title}}
                 </h3>
                 <p>{{movie.overview | slice: 0:1300 }}</p>
                 <button class="btn btn-danger btn-sm"
                 (click)="onMovieClick(movie)">Más información</button>
->>>>>>> Stashed changes
 
             </div>
 
