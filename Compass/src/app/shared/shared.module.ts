@@ -8,6 +8,7 @@ import { NgbPaginationModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap
 import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
 import { CastSlideShowComponent } from './cast-slide-show/cast-slide-show.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SeriesPosterGridComponent } from './series-poster-grid/series-poster-grid.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     SlideShowComponent,
     PeliculasPosterGridComponent,
-    CastSlideShowComponent
+    CastSlideShowComponent,
+    SeriesPosterGridComponent
   ],
   exports: [
     NavbarComponent,

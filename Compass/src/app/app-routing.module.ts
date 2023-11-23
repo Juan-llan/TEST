@@ -11,7 +11,7 @@ import { HomerealComponent } from './pages/homereal/homereal.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { PeliculaComponent } from './pages/pelicula/pelicula.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
-
+import { SeriesComponent } from './components/series/series.component';
 
 
 const routes: Routes = [
@@ -20,9 +20,12 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'homereal', component: HomerealComponent },
   { path: 'buscar/:texto', component: BuscarComponent },
+  
   { path: 'pelicula/:id', component: PeliculaComponent },
+  { path: 'series/:id', component: SeriesComponent },
 
   { path: 'peliculas', component: PeliculasComponent },
+
 
   { path: 'login', component: LoginComponent },
   { path: 'registrar-usuario', component: RegistrarUsuarioComponent },

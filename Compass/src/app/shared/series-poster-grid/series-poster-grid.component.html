@@ -1,0 +1,16 @@
+  <div class="row">
+    <div class="col-md-3 mb-5 animate__animated animate__fadeIn" *ngFor="let serie of Series">
+        <img [src]=" serie.poster_path | poster" class="img-thumbnail img-fluid cursor" (click)="onMovieClick(serie)" />
+        <div>
+            <h3 style="color: white;" class="mt-2">{{ serie.name }}</h3>
+            <div class="row">
+                <div class="col-10 text-white">
+                    <ngb-rating style="color: #E50914" [rate]="serie.vote_average"></ngb-rating>
+                </div>
+                <div class="col-2 text-white">
+                    {{ serie.vote_average | number:'1.1-2' }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
